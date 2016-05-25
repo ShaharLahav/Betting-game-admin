@@ -1,0 +1,37 @@
+<ion-navbar *navbar>
+  <!--<ion-title>Lists</ion-title>-->
+</ion-navbar>
+
+<ion-content padding class="page1" style="background-color:#FFFFFF;">
+  <!--<h2>Shahar's App!</h2>-->
+
+  <ion-list>
+
+    <!--<button ion-item class="big" *ngFor="#p of myData" longPress="{{p._id}}" (click)="clicked(p)" >
+
+      <h2>{{p.name}}</h2>
+      <h4 style="color:grey;">{{p.description}}</h4>
+       <ion-icon item-right name="ios-arrow-forward-outline"></ion-icon>
+       {{Date(game.time).getFullYear()}}
+    </button>-->
+<button ion-item class="bigbig" *ngFor="#game of myData" longPress="{{game._id}}" (click)="clicked(game)" [ngClass]="{reddd:NotDefinedYet(game)}"> 
+  {{game.Country1}} VS {{game.Country2}} {{game.time | date:"d/M/HH/mm"}} {{game.score}}
+</button>
+</ion-list>
+
+
+  
+ <button buti fab fab-bottom fab-center (click)="openModal()">
+        <ion-icon name='add'></ion-icon>
+    </button>
+  
+  <!--<ul>-->
+      
+      
+      
+<!--      
+    <li *ngFor="#p of myData"></li>
+  </ul>
+  <input type="text" #item />
+  <button (click)="add(item.value); item.value = '';">Add Item</button>-->
+</ion-content>
